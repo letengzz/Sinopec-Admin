@@ -29,7 +29,7 @@ export function getDbConfig(): DbConfig {
   return {
     host: process.env.MYSQL_HOST || '127.0.0.1',
     port: readInt('MYSQL_PORT', 3306),
-    user: process.env.MYSQL_USER || 'root',
+    user: process.env.MYSQL_USER || 'sinopec',
     password: process.env.MYSQL_PASSWORD ?? '',
     database: process.env.MYSQL_DATABASE || 'sinopec_admin',
     connectionLimit: readInt('MYSQL_POOL_SIZE', 10),
