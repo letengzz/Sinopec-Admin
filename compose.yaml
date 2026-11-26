@@ -62,7 +62,7 @@ services:
       # 连库参数全部显式给：镜像里没有 .env，容器里的 127.0.0.1 也不是宿主机
       MYSQL_HOST: mysql
       MYSQL_PORT: '3306'
-      MYSQL_USER: nomi
+      MYSQL_USER: ${MYSQL_USER:?请在 .env 里设置 MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD:?请在 .env 里设置 MYSQL_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE:-nomi_admin}
       # 不配就会用代码里的开发默认值 —— 等于线上 token 密钥公开

@@ -31,7 +31,7 @@ export function getDbConfig(): DbConfig {
     port: readInt('MYSQL_PORT', 3306),
     user: process.env.MYSQL_USER || 'root',
     password: process.env.MYSQL_PASSWORD ?? '',
-    database: process.env.MYSQL_DATABASE || 'nomi_admin',
+    database: process.env.MYSQL_DATABASE || 'sinopec_admin',
     connectionLimit: readInt('MYSQL_POOL_SIZE', 10),
     tokenSecret:
       process.env.TOKEN_SECRET || 'nomi-admin-dev-token-secret-change-me-in-production',
